@@ -1,0 +1,32 @@
+<dom-module id="my-chart-pie">
+  <style>
+    google-chart {
+      width: 400px;
+      height: 300px;
+    }
+  </style>
+  <template>
+    <google-chart
+      type='pie'
+      options='{
+        "title": "DIA",
+        "backgroundColor": "tomato"
+      }'
+      data="{{url}}">
+    </google-chart>
+  </template>
+
+  <script>
+    (function() {
+      Polymer({
+        is: 'my-chart-pie',
+        properties: {
+          url: {
+            type: String
+          }
+        },
+      });
+    })();
+  </script>
+
+</dom-module>

@@ -1,0 +1,9 @@
+[
+ ["Grupo", "Valor"],
+ ["COCINA", 42.72],
+ ["VAJILA", 29.33],
+ ["CRISTALERÍA", 10.67],
+ ["CUBERTERÍA", 6.22],
+ ["DIVERSOS", 5.76],
+ ["Otros", 5.3]
+]
