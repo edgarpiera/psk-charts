@@ -117,12 +117,77 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="home">
 
-              <paper-material elevation="1">
+              <div style="background-color: #0000AA">
                 <my-chart-pie
+                  title="Grupos - DIA"
                   url="data/salesGroupsDay.json">
                 </my-chart-pie>
-              </paper-material>
 
+                <my-chart-pie
+                  title="Grupos - MES"
+                  url="data/salesGroupsMonth.json">
+                </my-chart-pie>
+
+                <my-chart-pie
+                  title="Grupos - YTD"
+                  url="data/salesGroupsYTD.json">
+                </my-chart-pie>
+              </div>
+
+              <div style="background-color: #008800">
+                <my-chart-pie
+                  title="Familias - DIA"
+                  url="data/salesFamiliesDay.json">
+                </my-chart-pie>
+
+                <my-chart-pie
+                  title="Familias - MES"
+                  url="data/salesFamiliesMonth.json">
+                </my-chart-pie>
+
+                <my-chart-pie
+                  title="Familias - YTD"
+                  url="data/salesFamiliesYTD.json">
+                </my-chart-pie>
+              </div>
+
+              <paper-material>
+                <cleo-material-table
+                  id="table"
+                  title="Normal demo">
+                  <!--columns="[{'key':'title','title':'Title'},{'key':'content','title':'Content'}]"-->
+                  <!--available-columns="[-->
+                    <!--{key: 'title', title: 'Title'},-->
+                    <!--{key: 'content', title: 'Content'},-->
+                    <!--{key: 'createdAt', title: 'Created at'}-->
+                  <!--]"-->
+                  <!--data="[-->
+                    <!--{-->
+                      <!--title: 'First blog post',-->
+                      <!--content: 'This is the content of the first blog post , bla bla tech bla dev bla polymer bla bla...',-->
+                      <!--createdAt: new Date()-->
+                    <!--},-->
+                    <!--{-->
+                      <!--title: 'Second blog post',-->
+                      <!--content: 'This is the content of the second blog post , bla bla tech bla dev bla more polymer bla bla...',-->
+                      <!--createdAt: new Date(),-->
+                      <!--id: 3-->
+                    <!--}-->
+                  <!--]"-->
+                  <!--start="0"-->
+                  <!--per-page="50"-->
+                  <!--total="150"-->
+                  <!--single-actions='[-->
+                    <!--{-->
+                      <!--title: "Delete",-->
+                      <!--name: "delete",-->
+                      <!--icon: "icons:delete"-->
+                    <!--}-->
+                  <!--]'-->
+                <!-->-->
+
+                </cleo-material-table>
+              </paper-material>
 
             </section>
 
