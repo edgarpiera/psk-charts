@@ -31,7 +31,9 @@ In project folder execute.
 ```sh
 ./deploy.sh
 ```
-This execute `gulp` and copy dist folder into nginx www location.
+This execute `gulp` and copy dist folder into `nginx www location`.
+
+
 
 
 
