@@ -1,19 +1,54 @@
 <dom-module id="my-chart-pie">
   <style>
     google-chart {
-      width: 400px;
+      width: 100%;
       height: 300px;
     }
+
+    paper-card{
+      width: 400px;
+      background-color: #cccccc;
+    }
+
+    @media (max-width: 600px) {
+      paper-card{
+        width: 100%;
+        background-color: #ff0000;
+      }
+    }
+
+
+
+
   </style>
   <template>
-    <google-chart
-      type='pie'
-      options='{
-        "title": "DIA",
-        "backgroundColor": "tomato"
-      }'
-      data="{{url}}">
-    </google-chart>
+    <paper-card
+      heading="{{title}}">
+      <google-chart
+        type='pie'
+        options='{
+          "backgroundColor": "#eeeeee",
+          "fontName": ["Roboto", "Arial"],
+          "fontSize": "12",
+          "colors": ["#FE9A2E", "#FF8000", "#DF7401", "#B45F04", "#8A4B08", "#61380B"],
+
+          "legend": {
+            "position": "top",
+            "textStyle": {
+              "color": "#303F9F",
+              "fontSize": "12"
+            },
+            "maxLines": "3"
+          },
+
+          "chartArea": {
+            "width": "90%",
+            "height": "55%"
+          }
+        }'
+        data="{{url}}">
+      </google-chart>
+    </paper-card>
   </template>
 
   <script>
@@ -21,10 +56,13 @@
       Polymer({
         is: 'my-chart-pie',
         properties: {
+          title: {
+            type: String
+          },
           url: {
             type: String
           }
-        },
+        }
       });
     })();
   </script>
