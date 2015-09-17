@@ -1,4 +1,4 @@
-<dom-module id="my-chart-pie">
+<dom-module id="my-chart-line">
   <style>
     google-chart {
       width: 100%;
@@ -23,25 +23,17 @@
     <paper-card
       heading="{{title}}">
       <google-chart
-        type='pie'
-        options='{
-          "backgroundColor": "#eeeeee",
-          "fontName": ["Roboto", "Arial"],
-          "fontSize": "12",
-          "colors": ["#FE9A2E", "#FF8000", "#DF7401", "#B45F04", "#8A4B08", "#61380B"],
-s
-          "legend": {
-            "position": "top",
-            "textStyle": {
-              "color": "#303F9F",
-              "fontSize": "12"
-            },
-            "maxLines": "3"
+        type='line'
+        options = '{
+          "selectionMode": "multiple",
+          "tooltip": {
+            "trigger": "selection"
           },
-
-          "chartArea": {
-            "width": "90%",
-            "height": "55%"
+          "aggregationTarget": "category",
+          "vAxis": {
+           "gridlines": {
+            "count": 8
+           }
           }
         }'
         data="{{url}}">
@@ -52,7 +44,7 @@ s
   <script>
     (function() {
       Polymer({
-        is: 'my-chart-pie',
+        is: 'my-chart-line',
         properties: {
           title: {
             type: String

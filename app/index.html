@@ -84,6 +84,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
           </a>
+
+          <a data-route="charts" href="/charts">
+            <iron-icon icon="assessment"></iron-icon>
+            <span>Stats</span>
+          </a>
         </paper-menu>
       </paper-scroll-header-panel>
 
@@ -151,44 +156,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </my-chart-pie>
               </div>
 
-              <paper-material>
-                <cleo-material-table
-                  id="table"
-                  title="Normal demo">
-                  <!--columns="[{'key':'title','title':'Title'},{'key':'content','title':'Content'}]"-->
-                  <!--available-columns="[-->
-                    <!--{key: 'title', title: 'Title'},-->
-                    <!--{key: 'content', title: 'Content'},-->
-                    <!--{key: 'createdAt', title: 'Created at'}-->
-                  <!--]"-->
-                  <!--data="[-->
-                    <!--{-->
-                      <!--title: 'First blog post',-->
-                      <!--content: 'This is the content of the first blog post , bla bla tech bla dev bla polymer bla bla...',-->
-                      <!--createdAt: new Date()-->
-                    <!--},-->
-                    <!--{-->
-                      <!--title: 'Second blog post',-->
-                      <!--content: 'This is the content of the second blog post , bla bla tech bla dev bla more polymer bla bla...',-->
-                      <!--createdAt: new Date(),-->
-                      <!--id: 3-->
-                    <!--}-->
-                  <!--]"-->
-                  <!--start="0"-->
-                  <!--per-page="50"-->
-                  <!--total="150"-->
-                  <!--single-actions='[-->
-                    <!--{-->
-                      <!--title: "Delete",-->
-                      <!--name: "delete",-->
-                      <!--icon: "icons:delete"-->
-                    <!--}-->
-                  <!--]'-->
-                <!-->-->
-
-                </cleo-material-table>
-              </paper-material>
-
             </section>
 
             <section data-route="users">
@@ -213,6 +180,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <h2 class="paper-font-display2">Contact</h2>
                 <p>This is the contact section</p>
               </paper-material>
+            </section>
+
+            <section data-route="charts">
+              <div style="background-color: #d4e157">
+                <my-chart-line
+                  title="Ticket Medio - Sanse"
+                  url="data/averageTicketSanse.json">>
+                </my-chart-line>
+
+              </div>
+
+
             </section>
 
           </iron-pages>

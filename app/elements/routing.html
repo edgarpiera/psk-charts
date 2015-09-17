@@ -32,7 +32,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.route = 'contact';
     });
 
-    // add #! before urls
+    page('/charts', function(){
+        app.route = 'charts';
+    });
+
+
+      // add #! before urls
     page({
       hashbang: true
     });
